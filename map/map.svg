@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="520" viewBox="0 0 780 520" font-family="sans-serif">
+<rect x="0" y="0" width="780" height="520" fill="#ffffff"/>
+<text x="50" y="26" font-size="18" font-weight="bold">Layout map — lia502</text>
+<line x1="115.0" y1="300.0" x2="115.0" y2="140.0" stroke="#555555" stroke-width="2"/>
+<line x1="115.0" y1="300.0" x2="285.0" y2="300.0" stroke="#555555" stroke-width="2"/>
+<path d="M 285.0 300.0 Q 325.0 220.0 285.0 140.0" fill="none" stroke="#9c27b0" stroke-width="2" stroke-dasharray="6,4"/>
+<path d="M 285.0 300.0 Q 227.41458796019964 190.87200029228788 115.0 140.0" fill="none" stroke="#9c27b0" stroke-width="2" stroke-dasharray="6,4"/>
+<line x1="115.0" y1="140.0" x2="285.0" y2="140.0" stroke="#555555" stroke-width="2"/>
+<line x1="285.0" y1="140.0" x2="455.0" y2="140.0" stroke="#555555" stroke-width="2"/>
+<line x1="455.0" y1="140.0" x2="625.0" y2="140.0" stroke="#555555" stroke-width="2"/>
+<rect x="50.0" y="250.0" width="130" height="100" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+<text x="115.0" y="272.0" font-size="16" font-weight="bold" text-anchor="middle">R0</text>
+<rect x="97.5" y="282.0" width="35.0" height="16" rx="4" fill="#2e7d32"/>
+<text x="115.0" y="295.0" font-size="9" fill="#ffffff" text-anchor="middle">START</text>
+<rect x="102.9" y="300.0" width="24.200000000000003" height="16" rx="4" fill="#1565c0"/>
+<text x="115.0" y="313.0" font-size="9" fill="#ffffff" text-anchor="middle">NPC</text>
+<rect x="220.0" y="250.0" width="130" height="100" rx="10" fill="#eef3fb" stroke="#5b7fb5" stroke-width="2"/>
+<text x="285.0" y="272.0" font-size="16" font-weight="bold" text-anchor="middle">R1</text>
+<rect x="270.2" y="282.0" width="29.6" height="16" rx="4" fill="#f9a825"/>
+<text x="285.0" y="295.0" font-size="9" fill="#000000" text-anchor="middle">ITEM</text>
+<rect x="50.0" y="90.0" width="130" height="100" rx="10" fill="#eef3fb" stroke="#5b7fb5" stroke-width="2"/>
+<text x="115.0" y="112.0" font-size="16" font-weight="bold" text-anchor="middle">R2</text>
+<rect x="220.0" y="90.0" width="130" height="100" rx="10" fill="#eef3fb" stroke="#5b7fb5" stroke-width="2"/>
+<text x="285.0" y="112.0" font-size="16" font-weight="bold" text-anchor="middle">R3</text>
+<rect x="270.2" y="122.0" width="29.6" height="16" rx="4" fill="#f9a825"/>
+<text x="285.0" y="135.0" font-size="9" fill="#000000" text-anchor="middle">ITEM</text>
+<rect x="272.9" y="140.0" width="24.200000000000003" height="16" rx="4" fill="#1565c0"/>
+<text x="285.0" y="153.0" font-size="9" fill="#ffffff" text-anchor="middle">NPC</text>
+<rect x="390.0" y="90.0" width="130" height="100" rx="10" fill="#eef3fb" stroke="#5b7fb5" stroke-width="2"/>
+<text x="455.0" y="112.0" font-size="16" font-weight="bold" text-anchor="middle">R4</text>
+<rect x="410.5" y="122.0" width="89.0" height="16" rx="4" fill="#f9a825"/>
+<text x="455.0" y="135.0" font-size="9" fill="#000000" text-anchor="middle">HAS ITEM_SLOT_0</text>
+<rect x="560.0" y="90.0" width="130" height="100" rx="10" fill="#fdecea" stroke="#c62828" stroke-width="2"/>
+<text x="625.0" y="112.0" font-size="16" font-weight="bold" text-anchor="middle">R5</text>
+<rect x="604.8" y="122.0" width="40.400000000000006" height="16" rx="4" fill="#c62828"/>
+<text x="625.0" y="135.0" font-size="9" fill="#ffffff" text-anchor="middle">LOCKED</text>
+<rect x="575.1" y="140.0" width="99.80000000000001" height="16" rx="4" fill="#c62828"/>
+<text x="625.0" y="153.0" font-size="9" fill="#ffffff" text-anchor="middle">needs ITEM_SLOT_0</text>
+<text x="319.8826604489967" y="230.23467910200657" font-size="10" fill="#9c27b0" text-anchor="middle">EAST</text>
+<text x="319.8826604489967" y="209.76532089799343" font-size="10" fill="#9c27b0" text-anchor="middle">NORTH</text>
+<text x="248.59773300346566" y="231.01540057728084" font-size="10" fill="#9c27b0" text-anchor="middle">SOUTH</text>
+<text x="186.06219614099973" y="172.15842470672467" font-size="10" fill="#9c27b0" text-anchor="middle">NORTH</text>
+<line x1="50" y1="480.0" x2="90" y2="480.0" stroke="#555555" stroke-width="2"/>
+<text x="96" y="484.0" font-size="11">direct exit</text>
+<path d="M 220 480.0 Q 240 465.0 260 480.0" fill="none" stroke="#9c27b0" stroke-width="2" stroke-dasharray="6,4"/>
+<text x="266" y="484.0" font-size="11">non-adjacent exit (direction labelled at each end)</text>
+<text x="50" y="502.0" font-size="11">Boxes: green = start, red border = locked, chips = LOCKED/HAS/ITEM/NPC</text>
+</svg>
