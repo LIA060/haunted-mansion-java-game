@@ -1,27 +1,14 @@
-Project idea: Emergency on a Space Station
+The Setup:
+You start on a space station where the power completely cuts out because the main batteries fried. Everything is dead, the lights are off, and you have to explore the place to find a way to fix it before the crew suffocates.
+Map & Items:
+It’s a 6-room layout where you can move between connected exits, scavenge for loot, and talk to any surviving crew members.
+Critical items to find: A repair tool, a spare battery, and a security keycard.
+Gated area: The main end-game area is the "Restricted Core" (Room 5). It's locked tight, and you have to search the Power Control Room (Room 4) to find the security key that unlocks it.
+The Mechanics / Gameplay Loop:
+I want a basic simulation running in the background for power and oxygen.
+You have a Power Generator (creates juice) and an Oxygen Recycler (uses that juice to make breathable air).
+Since the battery failure knocked out the generator, the oxygen recycler stops working. This creates a natural ticking clock for the player to hurry up.
+How to Win:
+The ultimate goal is to get the station safe again. You win once you use your tools to get the generator back online, verify that oxygen is flowing properly, and successfully break into the Restricted Core.
 
-Story
 
-My story takes place on a space station that has lost power. The player must explore the station and find a way to save it.
-
-The reason the station lost power is: [write your idea here].
-
-Rooms and items
-
-The station has six rooms connected by exits. The player can explore the rooms, collect useful items, and talk to characters.
-
-Some items the player can find are: [write your ideas here].
-
-The restricted room can be unlocked by: [write your idea here].
-
-Simulation
-
-The simulation represents the station's systems. Machines can produce, use, or convert resources such as power and oxygen.
-
-The machines I plan to include are: [write your ideas here].
-
-Goal
-
-The player's main goal is to: [write your idea here].
-
-The player will succeed when: [write your idea here].
