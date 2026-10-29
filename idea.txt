@@ -1,0 +1,27 @@
+Project idea: Emergency on a Space Station
+
+Story
+
+My story takes place on a space station that has lost power. The player must explore the station and find a way to save it.
+
+The reason the station lost power is: [write your idea here].
+
+Rooms and items
+
+The station has six rooms connected by exits. The player can explore the rooms, collect useful items, and talk to characters.
+
+Some items the player can find are: [write your ideas here].
+
+The restricted room can be unlocked by: [write your idea here].
+
+Simulation
+
+The simulation represents the station's systems. Machines can produce, use, or convert resources such as power and oxygen.
+
+The machines I plan to include are: [write your ideas here].
+
+Goal
+
+The player's main goal is to: [write your idea here].
+
+The player will succeed when: [write your idea here].
