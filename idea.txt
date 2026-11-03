@@ -1,14 +1,3 @@
-The Setup:
-You start on a space station where the power completely cuts out because the main batteries fried. Everything is dead, the lights are off, and you have to explore the place to find a way to fix it before the crew suffocates.
-Map & Items:
-It’s a 6-room layout where you can move between connected exits, scavenge for loot, and talk to any surviving crew members.
-Critical items to find: A repair tool, a spare battery, and a security keycard.
-Gated area: The main end-game area is the "Restricted Core" (Room 5). It's locked tight, and you have to search the Power Control Room (Room 4) to find the security key that unlocks it.
-The Mechanics / Gameplay Loop:
-I want a basic simulation running in the background for power and oxygen.
-You have a Power Generator (creates juice) and an Oxygen Recycler (uses that juice to make breathable air).
-Since the battery failure knocked out the generator, the oxygen recycler stops working. This creates a natural ticking clock for the player to hurry up.
-How to Win:
-The ultimate goal is to get the station safe again. You win once you use your tools to get the generator back online, verify that oxygen is flowing properly, and successfully break into the Restricted Core.
+The player must investigate the haunted mansion in the game and figure out how to get out before it gets too dangerous. When the player first arrives in R0 (entrance),  a terrified servant warns them about the dangers inside the mansion and says they need a key to escape. R1 (library) has old books, dusty shelves and a journal with clues about the mansion, as well as a torch that the player can take. R2 (dining room) has a long dining table and vintage furniture, with strange scary noises. The player must spend time in this optional chamber, which has no important items or NPCs. Paintings of the mansions previous residents are in  R3 (portrait gallery), along with a ghost NPC who can give the player a clue about the key's location. The antique bed and wardrobe in R4 (old bedroom) are where the escape key is hidden. The sealed chamber, R5( secret escape tunnel), can only be entered using the key found in R4. Once the player finds it, they win by unlocking R5 and escaping the mansion. 
 
 
