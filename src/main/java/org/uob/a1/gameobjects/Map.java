@@ -2,8 +2,16 @@ package org.uob.a1.gameobjects;
 
 public class Map {
 
+    private Player p;
+    private Room currentRoom;
+    private Score s;
+    private boolean running;
+
+
     public Map(Room startingRoom) {
         // TODO
+        this.currentRoom = startingRoom;
+        this.running = true;
     }
 
     public Map() {
@@ -12,15 +20,17 @@ public class Map {
 
     public boolean isRunning() {
         // TODO
-        return false;
+        return running;
     }
 
     public void setRunning(boolean running) {
         // TODO
+        this.running = running;
+
     }
 
     public Room getCurrentRoom() {
         // TODO
-        return null;
+        return currentRoom;
     }
 }
