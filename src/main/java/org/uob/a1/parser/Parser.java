@@ -96,6 +96,21 @@ public class Parser {
                     }
                 }
                 return "not found, choose different item ";
+            //ask
+            case "ask":
+                if(word2.equals("1")){
+                    return "The previous owner vanished many years ago,"
+                    + "under disturbing circumstances. All that was left of them was traces of their blood!"
+                    +"Not even their bodies were found... Some say they never really left";
+                }
+                else if(word2.equals("2")){
+                    return "Everyone wants to know where it is, but no one knows.. "
+                    +"The previous owner left their most precious belongings in the bedroom."
+                    +"Search carefully around the bed and wardrobe.. the key is closer than you think..";
+                }
+                else{
+                    return "please ask a question";
+                }
             //3 get
             case "get":
                 if(word2.equals("")){
@@ -200,13 +215,13 @@ public class Parser {
                         return npcs[i].getDialogue();
                     }
                 }
-                return "not found ";
+                return "NPC not found ";
             //score
             case "score":
                 return "your score: " +map.getScore().getScore();
             //help
             case "help":
-                return "Choose what to do (move, look, take, get, inventory, use, activate, talk, score) or type quit/exit";
+                return "Choose what to do (move, look, take, get, inventory, use, activate, talk, score, map) or type quit/exit";
             //quit
             case "quit":
                 map.setRunning(false);
@@ -215,6 +230,12 @@ public class Parser {
             case "exit":
                 map.setRunning(false);
                 return "exiting game";
+            //map
+            case "map":
+                if(word1.equals("map")){
+                    map.displayMap();
+                    return "here is the mansion";
+                }
             default:
                 return "write help for assistance";
 

@@ -86,7 +86,59 @@ public class Map {
         r5.addExit(e14);
 
         Npc servant = new Npc("servant", "please, you must listen!! this mansion is not safe, fron doors are sealed, and the only way out is through the secret tunnel. You need to find the key hidden somewhere. Be careful, something is watching you");
-        Npc ghost = new Npc("ghost", "you want the key, dont you? the previous owner kept their precious belongigns in the bedroom. Search carefully, the key is closer than you think....");
+        Npc ghost = new Npc("ghost", "Ah... another visitor. Ehat is it that you wish to know? \n\n"+ "1. What happened to the previous owner?\n"+"2. Where can I find the escape key?\n"+"Type 'ask 1' or 'ask 2' to choose your question");
+
+        r0.addNpc(servant);
+        r3.addNpc(ghost);
+
+
+        Item wardrobe = new Item("wardrobe", "you open the old wooden wardrobe. Inside, you notice a small hidden compartment", r4, "", "object", null);
+        Item bed = new Item("bed", "you inspect the bed.. something seems to be tucked underneath it", r4, "", "object", null);
+        Item key = new Item("key", "an old, rusty key. It kind of looks improtant..", r4, "you hear a CLICK!! the bedroom key unlocked the escape tunnel", "key", e12);
+
+        r4.addItem(wardrobe);
+        r4.addItem(bed);
+        r4.addItem(key);
+
+    }
+
+    public void displayMap(){
+
+        System.out.println();
+        System.out.println("                      HAUNTED MANSION");
+        System.out.println();
+
+        System.out.println("  +------+     +------+     +------+     +------+");
+
+        System.out.println("  |  R2  |-----|  R3  |-----|  R4  |-----|  R5  |");
+
+        System.out.println("  |Dining|     |Gallery|    |Bedroom|    |Escape|");
+
+        System.out.println("  +------+     +------+     +------+     +------+");
+
+        System.out.println("      |");
+
+        System.out.println("      |");
+
+        System.out.println("  +------+     +------+     +------+     +------+");
+
+        System.out.println("  |  R0  |-----|  R1  |");
+
+        System.out.println("  |Entrance|     |Library| ");
+
+        System.out.println("  +------+     +------+");
+        
+        System.out.println();
+        System.out.println("R0 is the starting room");
+        System.out.println("R5 loacked escape room");
+
+
+
+
+
+
+
+
 
     }
 
