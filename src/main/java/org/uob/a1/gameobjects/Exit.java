@@ -13,9 +13,10 @@ public class Exit {
         // TODO
         this.name = name;
         this.destination = destination;
-        this.source = source;
         this.locked = locked;
-        this.key = key;
+
+        this.source = null;
+        this.key = null;
     }
 
     public String getName() {
