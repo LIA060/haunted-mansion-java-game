@@ -20,12 +20,12 @@ public class Map {
         this.running = true;
        
 
-        Room r0 = new Room("room 0", "Starting room");
-        Room r1 = new Room("room 1", "2nd room");
-        Room r2 = new Room("room 2", "3rd room");
-        Room r3 = new Room("room 3", "4rth room");
-        Room r4 = new Room("room 4", "5th room");
-        Room r5 = new Room("room 5", "6th room");
+        Room r0 = new Room("room 0: entrance", "a dusty entrance hall with a staircase and two mysterious doors infront. The heavy front door mysteriously shut, leaving you trapped");
+        Room r1 = new Room("room 1: library", "an old library filled with old books and broken furniture... and a strange loud silence filling the room");
+        Room r2 = new Room("room 2: dining room", "a large dining room where chairs are scattered around and a strange noise seems to come from somewhere nearby");
+        Room r3 = new Room("room 3: portrail gallery", "a gallery filled with paintings of the mansion's previous owners. A ghost wanders between the portraits, looks like he knows something about escaping");
+        Room r4 = new Room("room 4: old bedroom", "a bedroom with a big bed and large wooden wardrobe. Dust is everywhere. But it looks like the room has been distributed recently, hinting that the escape key is hidden somewhere inside");
+        Room r5 = new Room("room 5: secret escape tunnel", "a hidden stone chamber leading to an underground escape tunnel. Entrance is sealed by an old locked door.. the only way out of the mansion");
 
         this.currentRoom = r0;
 
@@ -85,6 +85,8 @@ public class Map {
         e14.setSource(r5);
         r5.addExit(e14);
 
+        Npc servant = new Npc("servant", "please, you must listen!! this mansion is not safe, fron doors are sealed, and the only way out is through the secret tunnel. You need to find the key hidden somewhere. Be careful, something is watching you");
+        Npc ghost = new Npc("ghost", "you want the key, dont you? the previous owner kept their precious belongigns in the bedroom. Search carefully, the key is closer than you think....");
 
     }
 

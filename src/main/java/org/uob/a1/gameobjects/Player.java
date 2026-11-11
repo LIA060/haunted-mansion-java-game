@@ -24,7 +24,7 @@ public class Player {
 
     public Item getItem(String name){
         for (int i=0; i<inventory.length; i++){
-            if(inventory[i].getName().toLowerCase().equals(name)){
+            if(inventory[i].getName().toLowerCase().equals(name.toLowerCase())){
                 return inventory[i];
             }
         }
@@ -32,9 +32,15 @@ public class Player {
     }
 
     public void displayInventory(){
-        for(int i=0; i<inventory.length; i++){
+        if(inventory.length == 0){
+            System.out.println("You have no items in your inventory.");
+        }
+        else{
+           for(int i=0; i<inventory.length; i++){
             System.out.println(inventory[i].getName());
         }
+        }
+        
     }
 
     // TODO

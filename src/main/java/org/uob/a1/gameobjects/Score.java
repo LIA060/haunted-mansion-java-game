@@ -6,6 +6,10 @@ public class Score {
     private int moving = -1;
     private int unlocking = 10;
 
+    public int getScore() {
+        return score;
+    }
+
     public void updatemove(){
         score += moving;
     }

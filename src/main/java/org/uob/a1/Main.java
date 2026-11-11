@@ -1,5 +1,7 @@
 package org.uob.a1;
 import java.util.Scanner;
+import org.uob.a1.gameobjects.Map;
+import org.uob.a1.parser.Parser;
 
 public class Main {
 
@@ -8,10 +10,22 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
+        Map m = new Map();
+        Parser p = new Parser();
+
+
        
         System.out.println("Welcome to the Haunted Mansion!");
 
-        System.out.println("Type 'quit' to exit the game.");
+        while(m.isRunning()){
+            System.out.println(m.getCurrentRoom());
+            System.out.println("> ");
+            String input = sc.nextLine();
+            String res = p.parse(m, input);
+            System.out.println(res);
+        }
+
+        /*System.out.println("Type 'quit' to exit the game.");
 
         String input = "";
         while(!input.equals("quit")){
@@ -19,7 +33,7 @@ public class Main {
             input = sc.nextLine();
 
         }
-        System.out.println("Thanks for playing!");
+        System.out.println("Thanks for playing!");*/
             
 
 
