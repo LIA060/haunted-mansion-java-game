@@ -64,9 +64,9 @@ public class Parser {
                 if(exit.isLocked()){
                     return "the way is locked";
                 }
-                map.setCurrentRoom(exit.getDestination());
+                map.setCurrentRoom(exit.getDestination()); //finds the exit of our current room 
                 map.getScore().updatemove();
-                if(map.getCurrentRoom().getName().equals("\nroom 5: secret escape tunnel")){
+                if(map.getCurrentRoom().getName().equals("\nroom 5: secret escape tunnel")){ //victory message
                     map.setRunning(false);
                     return "YOU ESCAPED!!!\n Congratulations!! the fresh wind touching your face must feel amazing.\n Final scor: "+ map.getScore().getScore();
                 }
@@ -80,7 +80,7 @@ public class Parser {
                 }
                 //wardrobe
                 if(word2.equals("wardrobe")){
-                    if(map.getCurrentRoom().getName().equals("\nroom 4: old bedroom")){
+                    if(map.getCurrentRoom().getName().equals("\nroom 4: old bedroom")){ //reveals key when we open wardrobe
                         if(map.revealKey()){
                             return "you open the wardrobe and look through the dusty clothes.. theres a a rusty key!!";
                         } 
@@ -127,8 +127,8 @@ public class Parser {
                 }
                 return "not found, choose different item ";
             //ask
-            case "ask":
-                if(word2.equals("1")){
+            case "ask": //dialogue
+                if(word2.equals("1")){ 
                     return "The previous owner vanished many years ago, "
                     + "under disturbing circumstances. \nAll that was left of them was traces of their blood! "
                     +"Not even their bodies were found... Some say they never really left";
@@ -183,9 +183,9 @@ public class Parser {
 
                            Exit target = (Exit) inv[i].getTarget();
                            if(target.isLocked()){
-                            target.setLocked(false);
-                            map.getScore().updateunlock();
-                            return inv[i].getUsedText();
+                                target.setLocked(false);
+                                map.getScore().updateunlock();
+                                return inv[i].getUsedText();
                            }
                            else{
                             return "the exit is already unlocked";
@@ -212,10 +212,10 @@ public class Parser {
                                 return "u cant use this here ";
                             }
                            Exit target = (Exit) inv1[i].getTarget();
-                           if(target.isLocked()){
-                            target.setLocked(false);
-                            map.getScore().updateunlock();
-                            return inv1[i].getUsedText();
+                            if(target.isLocked()){
+                                target.setLocked(false);
+                                map.getScore().updateunlock();
+                                return inv1[i].getUsedText();
                            }
                            else{
                             return "the exit is already unlocked";

@@ -11,7 +11,6 @@ public class Room {
     private HashMap<String, Exit> exit;
 
     public Room(String name, String description) {
-        // TODO
         this.name = name;
         this.description = description;
 
@@ -65,13 +64,11 @@ public class Room {
     }
 
     public void addExit(Exit exit) {
-        // TODO
         this.exit.put(exit.getName().toLowerCase(), exit);
         
     }
 
-    public void addItem(Item item) { //the one in player
-        // TODO
+    public void addItem(Item item) { //same cpde as the one in player
         Item [] n = new Item[items.length +1]; 
 
         for(int i=0; i<items.length; i++){
@@ -82,7 +79,6 @@ public class Room {
     }
 
     public void addNpc(Npc npc) {
-        // TODO
         Npc [] n = new Npc[npcs.length +1];
 
         for(int i=0; i< npcs.length; i++){
