@@ -6,8 +6,7 @@ public class Npc {
     private String dialogue;
 
 
-    public Npc(String name, String dialogue) {
-        // TODO
+    public Npc(String name, String dialogue) {//
         this.name = name;
         this.dialogue = dialogue;
     }

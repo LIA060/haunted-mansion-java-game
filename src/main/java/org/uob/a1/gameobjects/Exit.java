@@ -9,8 +9,7 @@ public class Exit {
     private Item key;
 
 
-    public Exit(String name, Room destination, boolean locked) {
-        // TODO
+    public Exit(String name, Room destination, boolean locked) {//
         this.name = name;
         this.destination = destination;
         this.locked = locked;

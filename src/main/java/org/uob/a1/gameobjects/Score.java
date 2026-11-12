@@ -6,7 +6,7 @@ public class Score {
     private int moving = -1;
     private int unlocking = 10;
 
-    public int getScore() {
+    public int getScore() {//
         return score;
     }
 
@@ -18,6 +18,4 @@ public class Score {
         score += unlocking;
     }
     
-
-    // TODO
 }

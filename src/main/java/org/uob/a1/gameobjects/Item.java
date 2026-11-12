@@ -10,8 +10,7 @@ public class Item {
     private Object target;
 
 
-    public Item(String name, String description, Room usedIn, String usedText, String type, Object target) {
-        // TODO
+    public Item(String name, String description, Room usedIn, String usedText, String type, Object target) {//
         this.name = name;
         this.description = description;
         this.usedIn = usedIn;
