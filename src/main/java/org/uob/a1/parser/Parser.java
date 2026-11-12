@@ -262,12 +262,10 @@ public class Parser {
                 return "exiting game";
             //map
             case "map":
-                if(word1.equals("map")){
-                    map.displayMap();
-                    return "here is the mansion";
-                }
+                map.displayMap();
+               return "here is the mansion";
             default:
-                return "write help for assistance";
+                return "write help to see what commands you can use";
 
     
 

@@ -100,13 +100,11 @@ public class Map {
 
 
         
-        Item key = new Item("key", "an old, rusty key. It kind of looks improtant..", r4, "you hear a CLICK!! the bedroom key unlocked the escape tunnel", "key", e12);
+        key = new Item("key", "an old, rusty key. It kind of looks improtant..", r4, "you hear a CLICK!! the bedroom key unlocked the escape tunnel", "key", e12);
         Item torch = new Item("torch", "an old torch covered in dust", r2, "you examine the old torch", "torch", null);
         Item journal = new Item("journal", "an old leather journal that feels like its calling your name..\n You open the first page.. 'I can hear the screamings.. they are disappearing one by one.\n Something is hiding inside the mansion..i dont think any of us can escape.'\n THATS IT! The journal is making the air too creepy, no more reading.", r1,"you quickly but carefully close the journal", "journal", null);
 
 
-        
-        r4.addItem(key);
         r2.addItem(torch);
         r1.addItem(journal);
 
@@ -121,7 +119,7 @@ public class Map {
         return false;
     }
 
-    public void displayMap(){
+    public void displayMap(){ //visual map
 
         System.out.println();
         System.out.println("                      HAUNTED MANSION");
