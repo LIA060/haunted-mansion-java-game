@@ -55,7 +55,10 @@ public class Room {
 
         result = result + "\nItems: ";
         for(int i=0; i<items.length; i++){
-            result = result + items[i].getName() + " ";
+            if(items[i] != null){
+                result = result + items[i].getName() + " ";
+            }
+            
         }
         
         return result;
@@ -95,7 +98,7 @@ public class Room {
 
         int count = 0; //count how many items are there
         for(int i=0; i<items.length; i++){
-            if(items[i].getName().toLowerCase().equals(target)){
+            if(items[i] != null && items[i].getName().toLowerCase().equals(target)){
                 count++;
             }
         }
@@ -108,7 +111,7 @@ public class Room {
 
         int j = 0;
         for(int i=0; i<items.length; i++){
-            if(!items[i].getName().toLowerCase().equals(target)){
+            if(items[i] != null && !items[i].getName().toLowerCase().equals(target)){
                 n[j] = items[i];
                 j++;
             }

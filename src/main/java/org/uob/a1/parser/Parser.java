@@ -65,11 +65,11 @@ public class Parser {
                     return "the way is locked";
                 }
                 map.setCurrentRoom(exit.getDestination());
-                if(map.getCurrentRoom().getName().equals("room 5: secret escape tunnel")){
+                map.getScore().updatemove();
+                if(map.getCurrentRoom().getName().equals("\nroom 5: secret escape tunnel")){
                     map.setRunning(false);
                     return "YOU ESCAPED!!!\n Congratulations!! the fresh wind touching your face must feel amazing.\n Final scor: "+ map.getScore().getScore();
                 }
-                map.getScore().updatemove();
 
                 return "you moved " +word2;
 
@@ -80,7 +80,7 @@ public class Parser {
                 }
                 //wardrobe
                 if(word2.equals("wardrobe")){
-                    if(map.getCurrentRoom().getName().equals("bedroom")){
+                    if(map.getCurrentRoom().getName().equals("\nroom 4: old bedroom")){
                         if(map.revealKey()){
                             return "you open the wardrobe and look through the dusty clothes.. theres a a rusty key!!";
                         } 
@@ -94,8 +94,8 @@ public class Parser {
                 }
 
                 //bed
-                if(word2.equals("wardrobe")){
-                    if(map.getCurrentRoom().getName().equals("bedroom")){
+                if(word2.equals("bed")){
+                     if(map.getCurrentRoom().getName().equals("\nroom 4: old bedroom")){
                         return "you slowly look around and under the bed. \nAHHH! EW a large rat just ran from under the bed... theres nothing else tho";
                     }
                     else{
@@ -110,7 +110,7 @@ public class Parser {
                         return item[i].getDescription();
                     }
                 }
-                return "you cant see that here ";
+            return "you cant see that here ";
             
             //3 take
             case "take":
