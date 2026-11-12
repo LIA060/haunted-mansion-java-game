@@ -7,6 +7,11 @@ public class Map {
     private Score s;
     private boolean running;
 
+    //extra for hidden key
+    private Room bedroom;
+    private Item key;
+    private boolean keyfound;
+
     public Map(Room startingRoom){
         this.currentRoom = startingRoom;
         this.p = new Player();
@@ -18,16 +23,18 @@ public class Map {
         this.p = new Player();
         this.s = new Score();
         this.running = true;
+        this.keyfound = false;
        
 
-        Room r0 = new Room("room 0: entrance", "a dusty entrance hall with a staircase and two mysterious doors infront. The heavy front door mysteriously shut, leaving you trapped");
-        Room r1 = new Room("room 1: library", "an old library filled with old books and broken furniture... and a strange loud silence filling the room");
-        Room r2 = new Room("room 2: dining room", "a large dining room where chairs are scattered around and a strange noise seems to come from somewhere nearby");
-        Room r3 = new Room("room 3: portrail gallery", "a gallery filled with paintings of the mansion's previous owners. A ghost wanders between the portraits, looks like he knows something about escaping");
-        Room r4 = new Room("room 4: old bedroom", "a bedroom with a big bed and large wooden wardrobe. Dust is everywhere. But it looks like the room has been distributed recently, hinting that the escape key is hidden somewhere inside");
-        Room r5 = new Room("room 5: secret escape tunnel", "a hidden stone chamber leading to an underground escape tunnel. Entrance is sealed by an old locked door.. the only way out of the mansion");
+        Room r0 = new Room("\nroom 0: entrance", "a dusty entrance hall with a staircase and two mysterious doors infront. The heavy front door mysteriously shut, leaving you trapped");
+        Room r1 = new Room("\nroom 1: library", "an old library filled with old books and broken furniture... and a strange loud silence filling the room");
+        Room r2 = new Room("\nroom 2: dining room", "a large dining room where chairs are scattered around and a strange noise seems to come from somewhere nearby");
+        Room r3 = new Room("\nroom 3: portrail gallery", "a gallery filled with paintings of the mansion's previous owners. A ghost wanders between the portraits, looks like he knows something about escaping");
+        Room r4 = new Room("\nroom 4: old bedroom", "a bedroom with a big bed and a wooden old wardrobe. \n There are scartches around the wardrobe.. as if someone had searched it before.");
+        Room r5 = new Room("\nroom 5: secret escape tunnel", "a hidden stone chamber leading to an underground escape tunnel. Entrance is sealed by an old locked door.. the only way out of the mansion");
 
         this.currentRoom = r0;
+        this.bedroom = r4;
 
         Exit e1 = new Exit("north", r2, false);
         e1.setSource(r0);
@@ -85,8 +92,8 @@ public class Map {
         e14.setSource(r5);
         r5.addExit(e14);
 
-        Npc servant = new Npc("servant", "please, you must listen!! this mansion is not safe, fron doors are sealed, and the only way out is through the secret tunnel. You need to find the key hidden somewhere. Be careful, something is watching you");
-        Npc ghost = new Npc("ghost", "Ah... another visitor. Ehat is it that you wish to know? \n\n"+ "1. What happened to the previous owner?\n"+"2. Where can I find the escape key?\n"+"Type 'ask 1' or 'ask 2' to choose your question");
+        Npc servant = new Npc("servant", "PLEASE, you must listen!! this mansion is not safe, fron doors are sealed, and the only way out is through the secret tunnel.\n You need to find the key hidden somewhere. Be careful, something is watching you...");
+        Npc ghost = new Npc("ghost", "Ah... another visitor. What is it that you wish to know? \n\n"+ "1. What happened to the previous owner?\n"+"2. Where can I find the escape key?\n"+"Type 'ask 1' or 'ask 2' to choose your question\n");
 
         r0.addNpc(servant);
         r3.addNpc(ghost);
@@ -102,42 +109,52 @@ public class Map {
 
     }
 
+    public boolean revealKey(){
+        if(keyfound == false){
+            bedroom.addItem(key);
+            keyfound = true;
+            return true;
+        }
+        return false;
+    }
+
     public void displayMap(){
 
         System.out.println();
         System.out.println("                      HAUNTED MANSION");
         System.out.println();
 
-        System.out.println("  +------+     +------+     +------+     +------+");
+        System.out.println("  +------+     +-------+     +------+      +------+");
 
-        System.out.println("  |  R2  |-----|  R3  |-----|  R4  |-----|  R5  |");
+        System.out.println("  |  R2  |-----|  R3   |-----|  R4   |-----|  R5  |");
 
-        System.out.println("  |Dining|     |Gallery|    |Bedroom|    |Escape|");
+        System.out.println("  |Dining|     |Gallery|     |Bedroom|     |Escape|");
 
-        System.out.println("  +------+     +------+     +------+     +------+");
+        System.out.println("  +------+     +-------+     +------+      +------+");
 
-        System.out.println("      |");
+        System.out.println("      |             |  ");
 
-        System.out.println("      |");
+        System.out.println("      |             |   ");
 
-        System.out.println("  +------+     +------+     +------+     +------+");
+        System.out.println("  +------+       +------+     ");
 
-        System.out.println("  |  R0  |-----|  R1  |");
+        System.out.println("  |  R0    |-----|  R1   |");
 
         System.out.println("  |Entrance|     |Library| ");
 
-        System.out.println("  +------+     +------+");
+        System.out.println("  +-------+      +------+");
         
+        System.out.println();
+        System.out.println("ADDITIONAL CONNECTION");
+        System.out.println("R1 SOUTH --> R2");
+        System.out.println("R2 NORTH --> R1");
+        System.out.println("R1 EAST  --> R3");
+        System.out.println("R3 NORTH --> R1");
+       
+
         System.out.println();
         System.out.println("R0 is the starting room");
         System.out.println("R5 loacked escape room");
-
-
-
-
-
-
-
 
 
     }

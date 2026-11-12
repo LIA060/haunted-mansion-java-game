@@ -65,6 +65,10 @@ public class Parser {
                     return "the way is locked";
                 }
                 map.setCurrentRoom(exit.getDestination());
+                if(map.getCurrentRoom().getName().equals("room 5: secret escape tunnel")){
+                    map.setRunning(false);
+                    return "YOU ESCAPED!!!\n Congratulations!! the fresh wind touching your face must feel amazing.\n Final scor: "+ map.getScore().getScore();
+                }
                 map.getScore().updatemove();
 
                 return "you moved " +word2;
@@ -74,6 +78,32 @@ public class Parser {
                 if(word2.equals("")){
                     return map.getCurrentRoom().toString();
                 }
+                //wardrobe
+                if(word2.equals("wardrobe")){
+                    if(map.getCurrentRoom().getName().equals("bedroom")){
+                        if(map.revealKey()){
+                            return "you open the wardrobe and look through the dusty clothes.. theres a a rusty key!!";
+                        } 
+                        else{
+                            return "you already checked the wardrobe";
+                        }
+                    } 
+                    else{
+                        return "the wardrobe is not here";
+                    }
+                }
+
+                //bed
+                if(word2.equals("wardrobe")){
+                    if(map.getCurrentRoom().getName().equals("bedroom")){
+                        return "you slowly look around and under the bed. \nAHHH! EW a large rat just ran from under the bed... theres nothing else tho";
+                    }
+                    else{
+                        return "the bed is not here";
+                    }
+                }
+               
+
                 Item [] item = map.getCurrentRoom().getItems();
                 for(int i=0; i<item.length; i++){
                     if(item[i].getName().toLowerCase().equals(word2.toLowerCase())){ ////or you can use helper method?
@@ -99,14 +129,14 @@ public class Parser {
             //ask
             case "ask":
                 if(word2.equals("1")){
-                    return "The previous owner vanished many years ago,"
-                    + "under disturbing circumstances. All that was left of them was traces of their blood!"
+                    return "The previous owner vanished many years ago, "
+                    + "under disturbing circumstances. \nAll that was left of them was traces of their blood! "
                     +"Not even their bodies were found... Some say they never really left";
                 }
                 else if(word2.equals("2")){
                     return "Everyone wants to know where it is, but no one knows.. "
-                    +"The previous owner left their most precious belongings in the bedroom."
-                    +"Search carefully around the bed and wardrobe.. the key is closer than you think..";
+                    +"\nThe previous owner left their most precious belongings in the bedroom."
+                    +" Search carefully around the bed and wardrobe.. the key is closer than you think..";
                 }
                 else{
                     return "please ask a question";

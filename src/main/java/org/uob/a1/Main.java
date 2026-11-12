@@ -25,16 +25,6 @@ public class Main {
             String res = p.parse(m, input);
             System.out.println(res);
         }
-
-        /*System.out.println("Type 'quit' to exit the game.");
-
-        String input = "";
-        while(!input.equals("quit")){
-            System.out.println("start the game by typing an input");
-            input = sc.nextLine();
-
-        }
-        System.out.println("Thanks for playing!");*/
             
 
 

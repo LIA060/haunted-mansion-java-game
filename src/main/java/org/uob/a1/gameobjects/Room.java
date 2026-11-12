@@ -41,7 +41,7 @@ public class Room {
     }
 
     public String toString() {
-        String result = name + ": " + description + "\n";
+        String result = name + ": " + description + "\n\n";
 
         result = result + "Exits: ";
         for (String exitName : exit.keySet()) {
