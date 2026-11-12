@@ -6,7 +6,7 @@ import org.uob.a1.parser.Parser;
 public class Main {
 
     public static void main(String[] args) {
-        // TODO: start the game and keep requesting user input until they quit
+       
 
         Scanner sc = new Scanner(System.in);
 
